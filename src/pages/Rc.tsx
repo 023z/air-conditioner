@@ -1,5 +1,13 @@
-import RemoteControl from "../components/RemoteControl";
+import React from 'react'
+import RemoteControl from '~/components/RemoteControl'
+import { useDetectStorage } from '~/hooks'
 
-export default function Rc() {
-  return <RemoteControl />;
+const Rc: React.FC = () => {
+  useDetectStorage()
+
+  return (
+    <RemoteControl />
+  )
 }
+
+export default Rc
